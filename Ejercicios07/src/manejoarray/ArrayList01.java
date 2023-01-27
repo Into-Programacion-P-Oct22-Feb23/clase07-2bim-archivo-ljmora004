@@ -7,6 +7,7 @@ package manejoarray;
 
 // import java.util.ArrayList;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -17,7 +18,7 @@ public class ArrayList01 {
     public static void main(String[] args) {
 
         // creación de un ArrayList
-        ArrayList<Integer> arreglo = new ArrayList<>();
+        /*ArrayList<Integer> arreglo = new ArrayList<>();
 
         arreglo.add(10);
         arreglo.add(20);
@@ -45,10 +46,30 @@ public class ArrayList01 {
         for (int i = 0; i < arreglo3.size(); i++) {
             System.out.println(arreglo3.get(i));
         }
-
+*/
         System.out.println("----------------------------------");
         ArrayList<String> arreglo2 = new ArrayList<>();
-
+        Scanner entrada = new Scanner(System.in);
+        boolean bandera = true;
+        String pais;
+        int opcion;
+        while(bandera){
+            System.out.println("Ingrese el nombre de un pais:");
+            pais = entrada.nextLine();
+            arreglo2.add(pais);
+            System.out.println("Si desea agregar mas paises presione 1,"
+                    + " de lo contrario 2.");
+            opcion = entrada.nextInt();
+            entrada.nextLine();
+            if(opcion != 1){
+                bandera = false;
+            }
+        }
+        System.out.println("\nPresentar los valores en pantalla:\n");
+        for(int i = 0; i < arreglo2.size(); i++){
+            System.out.printf("%s  ", arreglo2.get(i));
+        }
+        System.out.println();
         
         
         /*
